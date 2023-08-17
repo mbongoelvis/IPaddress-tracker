@@ -1,10 +1,11 @@
 // for the map
-var map = L.map("map").setView([51.505, -0.09], 13);
+var map = L.map("map").setView([51.513, -0.09], 20);
 
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
+
 L.marker([51.513, -0.09])
   .addTo(map)
   .bindPopup("Here is the location")
@@ -53,7 +54,7 @@ const searchip = () => {
 
           L.marker([finaldata.location.lat, finaldata.location.lng])
             .addTo(map)
-            .bindPopup(finaldata.ip)
+            .bindPopup("location of "+ `${address}`)
             .openPopup();
       })
       .catch((err) => {
