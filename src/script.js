@@ -10,6 +10,7 @@ L.marker([51.513, -0.09])
   .bindPopup("Here is the location")
   .openPopup();
 
+// when the user clicks then this function is executed
 const searchip = () => {
   const address = document.querySelector(".domain").value;
   const country = document.querySelector(".country");
